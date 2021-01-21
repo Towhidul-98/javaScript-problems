@@ -1,4 +1,4 @@
-
+// https://github.com/Towhidul-98/javaScript-problems
 
 // Kilometer to Meter Converting Function
 function  kilometerToMeter(distance){
@@ -44,27 +44,14 @@ function megaFriend(nameArray){           // Array containing name is passing to
     }
 
     let largestNameLength =nameArray[0].length;   //  Initiate a variable that will contain the length of the largest name          
+    let largestNameIndex = 0;             // Initiate a variable that will contain the index of the largest name 
     for ( i =0 ; i< nameArray.length ; i++){  // Finding out the length of the largest name using loop
         if( largestNameLength < nameArray[i].length){
             largestNameLength = nameArray[i].length;
+            largestNameIndex=i;
         }
     }
-    
-    // Edge Case 2 (whether the array contains more than one name having the largest length.)
-    let sameLength=[]; // The names having the largest length will be etracted in this array
-    let c=0;
-    for ( i = 0 ; i< nameArray.length ; i++ ){   
-        if( largestNameLength == nameArray[i].length){
-            sameLength[c]=nameArray[i];
-            c++;
-        }
-    }
-
-    if(sameLength.length==1){
-        return sameLength[0];  // If nameArray has only one largest name then only the name is returned.
-    }else{
-        return sameLength;    // If nameArray has more than one largest name  then the array of the largest names is returned.
-    }
+    return nameArray[largestNameIndex];
 }
 
 let meter= kilometerToMeter(3)  
@@ -76,9 +63,6 @@ console.log(totalCost)
 let cost= hotelCost(29)
 console.log(cost)
 
-let names = ["Rafi","Shawon","Shahriar","robin","roni"];
+let names = ["Rafi","Shawon","Shahriar","shah rin","robin","roni"];
 let largestName=megaFriend(names);
 console.log(largestName)
-// Two Edge Case 
-// ["Rafi","Shawon","Shahriar",34,"robin","roni"];
-// ["Rafi","Shawon","Shahriar","robin","Mojumder","roni"];
