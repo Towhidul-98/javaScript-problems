@@ -36,7 +36,7 @@ function hotelCost(days){
 // Finding Out The Largest Name
 function megaFriend(nameArray){           // Array containing name is passing to the function
     
-    // Edge Case 1( If anyone gives any element which is not a name)
+    // Edge Case ( If anyone gives any element which is not a name) Such as : ["robin", "Redwan",34,"shahriar"]
     for (let i =0 ; i< nameArray.length ; i++){  
         if( nameArray[i].length == undefined){
             return "In your input array, you have given something that is not name";
@@ -53,16 +53,3 @@ function megaFriend(nameArray){           // Array containing name is passing to
     }
     return nameArray[largestNameIndex];
 }
-
-let meter= kilometerToMeter(3)  
-console.log(meter)
-
-let totalCost= budgetCalculator( 5 , 5 , 5 )
-console.log(totalCost)
-
-let cost= hotelCost(29)
-console.log(cost)
-
-let names = ["Rafi","Shawon","Shahriar","shah rin","robin","roni"];
-let largestName=megaFriend(names);
-console.log(largestName)
